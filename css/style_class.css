@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    background-color: black;
+    /* 全域，使全文都使用此同一字體 */
+    font-family: 'Open Sans', sans-serif; /* ''使用的字體，可不斷加,'新字體'當作第一個字體找不到時的第二順位第三順位等 */
+}
+.bgPic1{
+width: 100%;
+height: 100vh;
+background-image: url(https://www.w3schools.com/howto/img_parallax.jpg);
+background-size: cover;
+background-position: center;
+/* 定位 */
+position: relative;
+opacity: 0.7; /*透明度，值0 ~ 1*/
+background-attachment: fixed;
+}
+.pic1Black_box{
+    width: 330px;
+    height: 66px;
+    background-color: #111111; /*用rgba可以透過alpha控制透明度*/
+    /* 文字樣式修改區塊 */
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 400;
+    /* 定位 */
+    position: absolute;
+    /* top: calc(50% - 33px); */
+    /* left: calc(50% - 165px); */
+    /* 
+    置中對齊的另一種寫法transform
+    往左要減
+    往上要減
+    往右要加
+    往下要加
+    50%為自身長寬的一半而非父物件
+    */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-165px,-33px); */
+    transform: translate(-50%,-50%) /*scale(2)*/; /* scale 接續在後方控制放大倍率*/
+}
+/* 製作遮罩 */
+.pic1Mask{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+.bgWord{
+    /* 需扣掉padding避免爆版 80+80 */
+    width: calc(100% - 160px);
+    height: auto;
+    padding: 50px 80px; /*padding: 上下 左右*/
+}
+.wordColor{
+    color: rgb(209, 209, 209);
+}
+h2{
+    font-size: 20px;
+    font-weight: 400;
+    /* margin:上下 左右 */
+    /* margin: 0 auto; */
+    text-align: center;
+    letter-spacing: 7px;
+    color: gainsboro;
+}
+p{
+    font-size: 15px;
+    /* justify 內容與外框文字左右切齊 */
+    text-align: justify;
+    /* 行高需比字體大小多一倍 */
+    line-height: 30px;
+    /* 內文顏色比標題淡 */
+    color: #777777;
+}
+.img2{
+    background-image: url(https://www.w3schools.com/howto/img_parallax2.jpg);
+}
+.img3{
+    background-image: url(https://www.w3schools.com/howto/img_parallax3.jpg);
+}
+.bgPic2{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    opacity: 0.7; 
+    background-attachment: fixed;
+}
+.pic2Content{
+    width: 330px;
+    height: 66px;
+    color: whitesmoke;
+    font-size: 25px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+}

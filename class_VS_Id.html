@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 因id權限在class之上，所以顏色仍為coral，不會被aquamarine取代 */
+        #box2{
+            background-color: coral;
+        }
+        /*共用相同長寬及顏色*/
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        /* 程式碼由上往下，因此box1顏色會覆蓋 */
+        .box1{
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box box1"></div>
+    <div id="box2" class="box"></div>
+</body>
+</html>
